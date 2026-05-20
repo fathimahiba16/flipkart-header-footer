@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 200px;
+            background-color: #2874f0;
+            color: white;
+        }
+
+        .logo img {
+            height: 26px;
+        }
+
+        .logo a {
+            margin-left: 0%;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            color: #ffe500;
+            text-decoration: none;
+        }
+
+        .explore a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img#explore {
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .login button {
+            padding: 8px 16px;
+            background-color: #ffffff;
+            color: #2874f0;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 300px;
+
+        }
+
+
+
+
+
+        .footer {
+            background-color: #1b1829;
+            padding: 20px;
+            height: 400px;
+            
+        }
+
+
+        .footer .top {
+            display: flex;
+            font-size: 12px;
+            justify-content: space-around;
+            color: #808080;
+
+        }
+
+        .footer .top .About a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 3;
+        }
+
+        .footer .top .Group-Companies a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 3;
+        }
+
+        .footer .top .Help a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 3;
+        }
+
+        .footer .top .Consumer-Policy a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 3;
+        }
+
+        .footer .top .mail-us p {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .footer .top .Register p {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .footer .bottom {
+            display: flex;
+            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid #454d5e;
+        }
+
+        .become-seller a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+
+        }
+
+        .bottom {
+            border-top: 1px solid #454d5e;
+            /* display: -webkit-flex;
+    display: -ms-flexbox; */
+            display: flex;
+            /* -webkit-justify-content: space-evenly; */
+            margin-top: 40px;
+            padding: 25px 0;
+            width: 100%;
+            /* -ms-flex-pack: space-evenly;
+    -webkit-align-items: center;
+    justify-content: space-evenly;
+    -ms-flex-align: center; */
+            align-items: center;
+        }
+
+        @media (max-width : 700px)
+        {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                align-items: center;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .nav-links { 
+                order: 2;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+
+            .login {
+                order: 1;
+            }
+        }
+        @media (max-width: 500px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .nav-links {
+                order: 2;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .login {
+                order: 1;
+            }
+        }
+        @media (max-width: 400px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .nav-links {
+                order: 2;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .login {
+                order: 1;
+            }
+        }
+        @media (max-width: 300px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .nav-links {
+                order: 2;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .login {
+                order: 1;
+            }
+            .footer .top {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class ="sidebar">
+
+                <button style="font-size: 30px; background: none; border: none; cursor: pointer;">&#9776;</button>
+
+            </div>
+            <div class="logo">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                    alt="Flipkart Logo"><br>
+                <a href="#">Explore Plus</a>
+                <img id="explore"
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png">
+            </div>
+            
+            <!-- <br><br>
+            <div class = "explore">
+                <a href="#">Plus</a>Explore
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png">
+            </div> -->
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+
+            </div>
+            <div class="login">
+                <button>Login</button>
+            </div>
+            <div class="nav-links">
+                <a href="#">Become a Seller</a>
+                <a href="#">More</a>
+                <a href="#">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Content</h1>
+
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <div class="About">
+                    <h4>ABOUT</h4>
+                    <a href="#">Contact Us</a><br>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Careers</a><br>
+                    <a href="#">Flipkart Stories</a><br>
+                    <a href="#">Press</a><br>
+                    <a href="#">Flipkart Wholesale</a><br>
+                    <a href="#">Corporate Information</a><br>
+
+                </div>
+
+                <div class="Group-Companies">
+                    <h4>GROUP COMPANIES</h4>
+                    <a href="#">Myntra</a><br>
+                    <a href="#">Cleartrip</a><br>
+                    <a href="#">Shopsy</a><br>
+                </div>
+
+                <div class="Help">
+                    <h4>HELP</h4>
+                    <a href="#">Payments</a><br>
+                    <a href="#">Shipping</a><br>
+                    <a href="#">Cancellation & Returns</a><br>
+                    <a href="#">FAQ</a><br>
+                </div>
+
+                <div class="Consumer-Policy">
+                    <h4>CONSUMER POLICY</h4>
+                    <a href="#">Return Policy</a><br>
+                    <a href="#">Terms Of Use</a><br>
+                    <a href="#">Security</a><br>
+                    <a href="#">Privacy</a><br>
+                    <a href="#">Sitemap</a><br>
+                    <a href="#">EPR Compliance</a><br>
+                    <a href="#">Grievance Redressal</a><br>
+                    <a href="#">FSSI Food Safety</a><br>
+                    <a href="#">Connect App</a><br>
+                </div>
+
+                <div class="mail-us">
+                    <h4>Mail Us:</h4>
+                    <p>Flipkart Internet Private Limited, <br>
+                        Buildings Alyssa, Begonia &<br>
+                        Clove Embassy Tech Village,<br>
+                        Outer Ring Road, Devarabeesanahalli Village,<br>
+                        Bengaluru, 560103, Karnataka, India</p>
+
+                    <div class="social-media">
+                        <h4>Social</h4><br>
+                        <a href="#"><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjkzMzEgMjFDMTcuOTAzNyAyMSAyMS45MzMxIDE2Ljk3MDYgMjEuOTMzMSAxMkMyMS45MzMxIDcuMDI5NDQgMTcuOTAzNyAzIDEyLjkzMzEgM0M3Ljk2MjU0IDMgMy45MzMxMSA3LjAyOTQ0IDMuOTMzMTEgMTJDMy45MzMxMSAxNi45NzA2IDcuOTYyNTQgMjEgMTIuOTMzMSAyMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY4MzEgOC4yNUgxNS4xODMxQzE0LjU4NjQgOC4yNSAxNC4wMTQxIDguNDg3MDUgMTMuNTkyMSA4LjkwOTAxQzEzLjE3MDIgOS4zMzA5NyAxMi45MzMxIDkuOTAzMjYgMTIuOTMzMSAxMC41VjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjkzMzExIDEzLjVIMTUuOTMzMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
+                                alt="Facebook" width="30"></a>
+                        <a href="#"><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4M18yMCkiPgo8cGF0aCBkPSJNMTMuNTQzNiAxMC42MTc5TDIwLjA5NzEgM0gxOC41NDQxTDEyLjg1MzcgOS42MTQ0OEw4LjMwODg3IDNIMy4wNjY4OUw5LjkzOTY0IDEzLjAwMjNMMy4wNjY4OSAyMC45OTA4SDQuNjE5OTRMMTAuNjI5MSAxNC4wMDU2TDE1LjQyODggMjAuOTkwOEgyMC42NzA4TDEzLjU0MzIgMTAuNjE3OUgxMy41NDM2Wk0xMS40MTY1IDEzLjA5MDRMMTAuNzIwMiAxMi4wOTQ0TDUuMTc5NTMgNC4xNjkxMUg3LjU2NDkxTDEyLjAzNjMgMTAuNTY1MUwxMi43MzI2IDExLjU2MTFMMTguNTQ0OCAxOS44NzQ4SDE2LjE1OTVMMTEuNDE2NSAxMy4wOTA4VjEzLjA5MDRaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE4M18yMCI+CjxyZWN0IHg9IjMuMDY2ODkiIHk9IjMiIHdpZHRoPSIxNy42MDM5IiBoZWlnaHQ9IjE4IiByeD0iMC4yIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                                alt="Twitter" width="30"></a>
+                        <a href="#"><img
+                                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/YoutubeLogo_958b78.svg"
+                                alt="YouTube" width="30"></a>
+                        <!-- <a href="#"><img scr = "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/InstagramLogo_854a2c.svg" alt = Instagram width="30"></a> -->
+                    </div>
+
+                </div>
+                <div class="Register">
+                    <h4>Registered Office Address:</h4>
+                    <p>Flipkart Internet Private Limited, <br>
+                        Buildings Alyssa, Begonia &<br>
+                        Clove Embassy Tech Village,<br>
+                        Outer Ring Road, Devarabeesanahalli Village,<br>
+                        Bengaluru, 560103, Karnataka, India<br>
+                        CIN : U51109KA2012PTC066107<br>
+                        Telephone: 044-45614700</p>
+                </div>
+            </div>
+            <div class ="become-seller">
+                
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTJoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuOTMgNS42MTRoLTIuOTQ4VjQuMTRjMC0uODE4LS42NTUtMS40NzMtMS40NzMtMS40NzNIOC41NmMtLjgxNyAwLTEuNDczLjY1NS0xLjQ3MyAxLjQ3M3YxLjQ3NEg0LjE0Yy0uODE4IDAtMS40NjYuNjU2LTEuNDY2IDEuNDc0bC0uMDA3IDguMTA1YzAgLjgxOC42NTUgMS40NzQgMS40NzMgMS40NzRoMTEuNzljLjgxOCAwIDEuNDc0LS42NTYgMS40NzQtMS40NzRWNy4wODhjMC0uODE4LS42NTYtMS40NzQtMS40NzQtMS40NzR6bS00LjQyMSAwSDguNTZWNC4xNGgyLjk0OHYxLjQ3NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0yKSIvPgogICAgPC9nPgo8L3N2Zz4K"
+                        alt="Flipkart Logo" width="20">
+                    <a href="#">Become a Seller</a>
+                    &nbsp;&nbsp;&nbsp;
+                 <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0zLTNoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTAuNDkyIDNDNi4zNTMgMyAzIDYuMzYgMyAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEwLjQ5MiAzem0zLjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo="
+                    alt="Advertise with us" width="20">
+                    <a href = "#">Advertise</a>
+                    &nbsp;&nbsp;&nbsp;
+
+                <img src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE4IDE3Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLTFoMjB2MjBILTF6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTYuNjY3IDVIMTQuODVjLjA5Mi0uMjU4LjE1LS41NDIuMTUtLjgzM2EyLjQ5NyAyLjQ5NyAwIDAgMC00LjU4My0xLjM3NUwxMCAzLjM1bC0uNDE3LS41NjdBMi41MSAyLjUxIDAgMCAwIDcuNSAxLjY2N2EyLjQ5NyAyLjQ5NyAwIDAgMC0yLjUgMi41YzAgLjI5MS4wNTguNTc1LjE1LjgzM0gzLjMzM2MtLjkyNSAwLTEuNjU4Ljc0Mi0xLjY1OCAxLjY2N2wtLjAwOCA5LjE2NkExLjY2IDEuNjYgMCAwIDAgMy4zMzMgMTcuNWgxMy4zMzRhMS42NiAxLjY2IDAgMCAwIDEuNjY2LTEuNjY3VjYuNjY3QTEuNjYgMS42NiAwIDAgMCAxNi42NjcgNXptMCA2LjY2N0gzLjMzM3YtNWg0LjIzNEw1LjgzMyA5LjAyNWwxLjM1Ljk3NSAxLjk4NC0yLjdMMTAgNi4xNjdsLjgzMyAxLjEzMyAxLjk4NCAyLjcgMS4zNS0uOTc1LTEuNzM0LTIuMzU4aDQuMjM0djV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMSAtMSkiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                    alt="Flipkart Logo" width="20">
+                    <a href="#">Gift cards</a>
+                    &nbsp;&nbsp;&nbsp;
+
+                <img src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTNoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNOS41IDNDNS4zNiAzIDIgNi4zNiAyIDEwLjUgMiAxNC42NCA1LjM2IDE4IDkuNSAxOGM0LjE0IDAgNy41LTMuMzYgNy41LTcuNUMxNyA2LjM2IDEzLjY0IDMgOS41IDN6bS43NSAxMi43NWgtMS41di0xLjVoMS41djEuNXptMS41NTMtNS44MTNsLS42NzYuNjljLS41NC41NDgtLjg3Ny45OTgtLjg3NyAyLjEyM2gtMS41di0uMzc1YzAtLjgyNS4zMzgtMS41NzUuODc3LTIuMTIzbC45My0uOTQ1Yy4yNzgtLjI3LjQ0My0uNjQ1LjQ0My0xLjA1NyAwLS44MjUtLjY3NS0xLjUtMS41LTEuNVM4IDcuNDI1IDggOC4yNUg2LjVhMyAzIDAgMSAxIDYgMGMwIC42Ni0uMjcgMS4yNi0uNjk3IDEuNjg4eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                    <a href="#">Help Center</a>
+                    &nbsp;&nbsp;&nbsp;
+
+                    
+                    <a href="#" style="color: #ffffff; font-size: 14px;">&copy; 2007-2026 Flipkart.com</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <img src ="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg" alt="Payment Methods" width="450">
+                        
+
+                
+
+            </div>
+            
+
+            <!-- <div class="">
+                <div class="become-seller">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTJoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuOTMgNS42MTRoLTIuOTQ4VjQuMTRjMC0uODE4LS42NTUtMS40NzMtMS40NzMtMS40NzNIOC41NmMtLjgxNyAwLTEuNDczLjY1NS0xLjQ3MyAxLjQ3M3YxLjQ3NEg0LjE0Yy0uODE4IDAtMS40NjYuNjU2LTEuNDY2IDEuNDc0bC0uMDA3IDguMTA1YzAgLjgxOC42NTUgMS40NzQgMS40NzMgMS40NzRoMTEuNzljLjgxOCAwIDEuNDc0LS42NTYgMS40NzQtMS40NzRWNy4wODhjMC0uODE4LS42NTYtMS40NzQtMS40NzQtMS40NzR6bS00LjQyMSAwSDguNTZWNC4xNGgyLjk0OHYxLjQ3NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0yKSIvPgogICAgPC9nPgo8L3N2Zz4K"
+                        alt="Flipkart Logo" width="30">
+                    <a href="#">Become a Seller</a>
+                </div>
+
+                <div class="advertise">
+                    <img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0zLTNoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTAuNDkyIDNDNi4zNTMgMyAzIDYuMzYgMyAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEwLjQ5MiAzem0zLjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                    <a href="#">Advertise</a>
+                </div>
+
+                <div class="gift-card">
+                    <img
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS00LTJoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTMuNDkyIDNDOS4zNTMgMyA1IDYuMzYgNSAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEzLjQ5MiAzem00LjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                    <a href="#">Gift Cards</a>
+                </div>
+                <div> -->
+
+                </div>
+
+
+</body>
+
+</html>
+<!-- <p style="text-align: center; padding: 20px; background-color: #343434;">&copy; 2024 Flipkart. All rights reserved.</p> -->
